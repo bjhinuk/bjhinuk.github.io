@@ -9,51 +9,103 @@
       rel="stylesheet" />
     <style>
       body {
-        font-family: "Roboto", sans-serif;
         margin: 0;
-        padding: 20px;
-        background-color: #f9f9f9;
+        font-family: "Roboto", sans-serif;
+        background: #f9f9f9;
         color: #333;
+        line-height: 1.6;
       }
-      h1 {
+      header {
+        background: #fff;
+        padding: 20px 0;
         text-align: center;
-        margin-bottom: 40px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
-      .paper {
+      nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: #0077b5;
+        font-weight: 500;
+        font-size: 1em;
+        padding: 10px;
+        display: block;
+        transition: border-bottom 0.3s;
+      }
+      nav ul li a:hover {
+        border-bottom: 2px solid #0077b5;
+      }
+      main {
+        padding: 40px 20px;
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: left;
+      }
+      section {
         margin-bottom: 30px;
       }
-      .paper h2 {
-        margin-bottom: 5px;
+      section h4 {
+        margin-bottom: 10px;
       }
-      .paper p {
+      section p {
         margin: 5px 0;
       }
-      .paper a {
-        color: #0077b5;
-        text-decoration: none;
-      }
-      .paper a:hover {
-        text-decoration: underline;
+      footer {
+        margin-top: 40px;
+        text-align: center;
+        font-size: 0.9em;
+        color: #aaa;
+        padding-bottom: 20px;
       }
     </style>
   </head>
+
   <body>
-    <h1>Research</h1>
+    <header>
+      <h1>Jhinuk Banerjee</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="teaching.html">Teaching</a></li>
+          <li><a href="resume.pdf">CV</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <div class="paper">
-      <h2>Title of Your First Paper</h2>
-      <p><strong>Authors:</strong> Your Name, Co-author Name</p>
-      <p><strong>Abstract:</strong> A brief summary of your paper goes here.</p>
-      <p><a href="link-to-your-paper.pdf" target="_blank">Download Paper</a></p>
-    </div>
+    <main>
+      <h2>Research</h2>
+      <h3>Working Papers</h3>
 
-    <div class="paper">
-      <h2>Title of Your Second Paper</h2>
-      <p><strong>Authors:</strong> Your Name, Co-author Name</p>
-      <p><strong>Abstract:</strong> A brief summary of your paper goes here.</p>
-      <p><a href="link-to-your-paper.pdf" target="_blank">Download Paper</a></p>
-    </div>
+      <section>
+        <h4>
+          Economic Insecurity and Gender in Politics: How Perceptions of
+          Economic Insecurity Shape Women’s Electoral Prospects
+        </h4>
+        <p><strong>Date:</strong> -</p>
+        <p><strong>Authors:</strong> Jhinuk Banerjee, Co-author Name</p>
+        <p>Description goes here.</p>
+        <p><a href="#">[PDF]</a></p>
+      </section>
 
-    <!-- Add more papers as needed -->
+      <section>
+        <h4>
+          Dividing Power, Building Peace: The Impact of Political
+          Decentralization on Conflict Resolution
+        </h4>
+        <p><strong>Date:</strong> -</p>
+        <p><strong>Authors:</strong> Jhinuk Banerjee, Co-author Name</p>
+        <p>Another short description goes here.</p>
+        <p><a href="#">[PDF]</a></p>
+      </section>
+    </main>
+
+    <footer>&copy; 2025 Jhinuk Banerjee. All rights reserved.</footer>
   </body>
 </html>

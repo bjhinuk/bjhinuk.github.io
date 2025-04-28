@@ -1,135 +1,141 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jhinuk Banerjee</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
-      rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet" />
-    <style>
-      body {
-        margin: 0;
-        font-family: "Roboto", sans-serif;
-        color: #333;
-        background-color: #f9f9f9;
-        line-height: 1.6;
-      }
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home - Jhinuk Banerjee</title>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+          rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet" />
+        <style>
+          body {
+            margin: 0;
+            font-family: "Roboto", sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+          }
+          header {
+            background: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          }
+          nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+          }
+          nav ul li a {
+            text-decoration: none;
+            color: #0077b5;
+            font-weight: 500;
+            font-size: 1em;
+            padding: 10px;
+            display: block;
+            transition: border-bottom 0.3s;
+          }
+          nav ul li a:hover {
+            border-bottom: 2px solid #0077b5;
+          }
+          header img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: 10px;
+          }
 
-      header {
-        background: #fff;
-        padding: 20px 0;
-        text-align: center;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      }
+          h1 {
+            margin-bottom: 10px;
+            font-weight: 700;
+            font-size: 2em;
+          }
 
-      header img {
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: 15px;
-      }
+          p.bio {
+            max-width: 600px;
+            margin: 0 auto 20px;
+            padding: 0 15px;
+            font-size: 1.1em;
+          }
 
-      h1 {
-        margin-bottom: 10px;
-        font-weight: 700;
-        font-size: 2em;
-      }
+          .social-icons {
+            margin: 20px 0;
+          }
 
-      p.bio {
-        max-width: 600px;
-        margin: 0 auto 20px;
-        padding: 0 15px;
-        font-size: 1.1em;
-      }
+          .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #555;
+            font-size: 1.2em;
+            display: inline-flex;
+            align-items: center;
+            transition: color 0.3s;
+          }
 
-      .social-icons {
-        margin: 20px 0;
-      }
+          .social-icons a:hover {
+            color: #0077b5; /* LinkedIn blue */
+          }
 
-      .social-icons a {
-        margin: 0 10px;
-        text-decoration: none;
-        color: #555;
-        font-size: 1.2em;
-        display: inline-flex;
-        align-items: center;
-        transition: color 0.3s;
-      }
+          .material-icons {
+            margin-right: 5px;
+          }
+          main {
+            padding: 20px;
+            text-align: center;
+          }
+          footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #aaa;
+            padding-bottom: 20px;
+          }
+        </style>
+      </head>
 
-      .social-icons a:hover {
-        color: #0077b5; /* LinkedIn blue */
-      }
+      <body>
+        <header>
+          <img src="image.JPG" alt="Jhinuk Banerjee" />
+          <h1>Jhinuk Banerjee</h1>
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="research.html">Research</a></li>
+              <li><a href="teaching.html">Teaching</a></li>
+              <li><a href="resume.pdf">CV</a></li>
+            </ul>
+          </nav>
+        </header>
 
-      .material-icons {
-        margin-right: 5px;
-      }
+        <main>
+          <p class="bio">
+            I am a second year Ph.D. student in Economics at the University of
+            Oklahoma with research interests in Political Economy, Development
+            Economics, and Gender Economics. My research focuses on how
+            perceptions of economic insecurity shape political participation and
+            support for female candidates.
+          </p>
+          <div class="social-icons">
+            <a
+              href="https://www.linkedin.com/in/jhinuk-banerjee-782198213/"
+              target="_blank">
+              <span class="material-icons">work</span>LinkedIn
+            </a>
+            <a href="mailto:jhinuk.ban1@ou.edu">
+              <span class="material-icons">email</span>Email
+            </a>
+          </div>
+        </main>
 
-      nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 20px 0 0;
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-      }
-
-      nav ul li a {
-        text-decoration: none;
-        color: #0077b5;
-        font-weight: 500;
-        font-size: 1em;
-        transition: border-bottom 0.3s;
-      }
-
-      nav ul li a:hover {
-        border-bottom: 2px solid #0077b5;
-      }
-
-      footer {
-        margin-top: 40px;
-        text-align: center;
-        font-size: 0.9em;
-        color: #aaa;
-        padding-bottom: 20px;
-      }
-    </style>
+        <footer>&copy; 2025 Jhinuk Banerjee. All rights reserved.</footer>
+      </body>
+    </html>
   </head>
-
-  <body>
-    <header>
-      <img src="image.JPG" alt="Jhinuk Banerjee" />
-      <h1>Jhinuk Banerjee</h1>
-      <p class="bio">
-        I am a second year Ph.D. student in Economics at the University of
-        Oklahoma with research interests in Political Economy, Development
-        Economics, and Gender Economics. My research focuses on how perceptions
-        of economic insecurity shape political participation and support for
-        female candidates.
-      </p>
-      <div class="social-icons">
-        <a
-          href="https://www.linkedin.com/in/jhinuk-banerjee-782198213/"
-          target="_blank">
-          <span class="material-icons">work</span>LinkedIn
-        </a>
-        <a href="mailto:jhinuk.ban1@ou.edu">
-          <span class="material-icons">email</span>Email
-        </a>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="teaching.html">Teaching</a></li>
-          <li><a href="resume.pdf">CV</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <footer>&copy; 2025 Jhinuk Banerjee. All rights reserved.</footer>
-  </body>
 </html>
