@@ -1,205 +1,496 @@
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-```
-<title>Home - Jhinuk Banerjee</title>
+    <title>Home - Jhinuk Banerjee</title>
 
-<!-- Google Fonts -->
-<link
-  href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
-  rel="stylesheet"
-/>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
-<!-- Material Icons -->
-<link
-  href="https://fonts.googleapis.com/icon?family=Material+Icons"
-  rel="stylesheet"
-/>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
 
-<!-- Font Awesome -->
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-/>
+    <style>
+      :root {
+        --background: #f8f9fa;
+        --surface: #ffffff;
+        --text: #333333;
+        --secondary-text: #666666;
+        --accent: #0077b5;
+        --border: #e5e5e5;
+        --shadow: rgba(0, 0, 0, 0.08);
+      }
 
-<style>
-  body {
-    margin: 0;
-    font-family: "Roboto", sans-serif;
-    color: #333;
-    background-color: #f9f9f9;
-    line-height: 1.6;
-  }
+      /* Dark mode */
+      body.dark-mode {
+        --background: #171717;
+        --surface: #222222;
+        --text: #eeeeee;
+        --secondary-text: #b8b8b8;
+        --accent: #5bb8e8;
+        --border: #383838;
+        --shadow: rgba(0, 0, 0, 0.3);
+      }
 
-  header {
-    background: #fff;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
+      * {
+        box-sizing: border-box;
+      }
 
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
+      body {
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+        color: var(--text);
+        background-color: var(--background);
+        line-height: 1.6;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
 
-  nav ul li a {
-    text-decoration: none;
-    color: #0077b5;
-    font-weight: 500;
-    font-size: 1em;
-    padding: 10px;
-    display: block;
-    transition: border-bottom 0.3s;
-  }
+      /* -------------------- */
+      /* Header / Navigation */
+      /* -------------------- */
 
-  nav ul li a:hover {
-    border-bottom: 2px solid #0077b5;
-  }
+      header {
+        background: var(--surface);
+        padding: 20px 7%;
+        box-shadow: 0 2px 6px var(--shadow);
+        transition: background-color 0.3s ease;
+      }
 
-  header img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-top: 10px;
-  }
+      .nav-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
 
-  h1 {
-    margin-bottom: 10px;
-    font-weight: 700;
-    font-size: 2em;
-  }
+      .site-name {
+        font-size: 1.25em;
+        font-weight: 500;
+        color: var(--text);
+        text-decoration: none;
+      }
 
-  p.bio {
-    max-width: 600px;
-    margin: 0 auto 20px;
-    padding: 0 15px;
-    font-size: 1.1em;
-  }
+      nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 28px;
+      }
 
-  .social-icons {
-    margin: 20px 0;
-  }
+      nav ul li a {
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 400;
+        font-size: 0.98em;
+        padding: 5px 0;
+        display: block;
+        transition: color 0.3s ease, border-bottom 0.3s ease;
+      }
 
-  .social-icons a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #555;
-    font-size: 1.2em;
-    display: inline-flex;
-    align-items: center;
-    transition: color 0.3s;
-  }
+      nav ul li a:hover {
+        color: var(--accent);
+        border-bottom: 2px solid var(--accent);
+      }
 
-  .social-icons a:hover {
-    color: #0077b5;
-  }
+      /* Dark mode button */
 
-  .social-icons i {
-    margin-right: 6px;
-  }
+      .theme-toggle {
+        border: none;
+        background: none;
+        color: var(--text);
+        cursor: pointer;
+        font-size: 1.05em;
+        padding: 5px;
+        transition: color 0.3s ease, transform 0.2s ease;
+      }
 
-  main {
-    padding: 20px;
-    text-align: center;
-  }
+      .theme-toggle:hover {
+        color: var(--accent);
+        transform: scale(1.08);
+      }
 
-  footer {
-    margin-top: 40px;
-    text-align: center;
-    font-size: 0.9em;
-    color: #aaa;
-    padding-bottom: 20px;
-  }
-</style>
-```
+      /* -------------------- */
+      /* Main Home Section */
+      /* -------------------- */
 
+      main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 75px 7% 40px;
+      }
+
+      .intro-section {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        align-items: center;
+        gap: 80px;
+      }
+
+      .intro-text {
+        text-align: left;
+      }
+
+      h1 {
+        margin: 0 0 18px;
+        font-weight: 700;
+        font-size: 2.7em;
+        letter-spacing: -0.5px;
+      }
+
+      .position {
+        margin: 0 0 25px;
+        font-size: 1.15em;
+        color: var(--secondary-text);
+      }
+
+      p.bio {
+        margin: 0;
+        font-size: 1.05em;
+        color: var(--text);
+        line-height: 1.8;
+      }
+
+      /* -------------------- */
+      /* Photo */
+      /* -------------------- */
+
+      .photo-container {
+        text-align: center;
+      }
+
+      .photo-container img {
+        width: 260px;
+        height: 260px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 5px 20px var(--shadow);
+      }
+
+      /* -------------------- */
+      /* Social Icons */
+      /* -------------------- */
+
+      .social-icons {
+        margin-top: 35px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .social-icons a {
+        text-decoration: none;
+        color: var(--secondary-text);
+        font-size: 0.98em;
+        display: inline-flex;
+        align-items: center;
+        transition: color 0.3s ease;
+      }
+
+      .social-icons a:hover {
+        color: var(--accent);
+      }
+
+      .social-icons i {
+        margin-right: 7px;
+        font-size: 1.05em;
+      }
+
+      /* -------------------- */
+      /* Contact */
+      /* -------------------- */
+
+      .contact-line {
+        margin-top: 18px;
+        color: var(--secondary-text);
+        font-size: 0.98em;
+      }
+
+      .contact-line a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      .contact-line a:hover {
+        text-decoration: underline;
+      }
+
+      /* -------------------- */
+      /* Research / Teaching */
+      /* -------------------- */
+
+      .home-links {
+        margin-top: 75px;
+        padding-top: 35px;
+        border-top: 1px solid var(--border);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+      }
+
+      .home-link {
+        text-decoration: none;
+        color: var(--text);
+        padding: 10px 0;
+        transition: color 0.3s ease;
+      }
+
+      .home-link h2 {
+        margin: 0 0 8px;
+        font-size: 1.25em;
+        font-weight: 500;
+      }
+
+      .home-link p {
+        margin: 0;
+        color: var(--secondary-text);
+        font-size: 0.95em;
+        line-height: 1.6;
+      }
+
+      .home-link:hover {
+        color: var(--accent);
+      }
+
+      .home-link:hover p {
+        color: var(--secondary-text);
+      }
+
+      /* -------------------- */
+      /* Footer */
+      /* -------------------- */
+
+      footer {
+        max-width: 1100px;
+        margin: 40px auto 0;
+        padding: 20px 7% 30px;
+        text-align: center;
+        font-size: 0.85em;
+        color: var(--secondary-text);
+      }
+
+      /* -------------------- */
+      /* Mobile */
+      /* -------------------- */
+
+      @media (max-width: 750px) {
+        header {
+          padding: 18px 5%;
+        }
+
+        .nav-container {
+          flex-wrap: wrap;
+          gap: 15px;
+        }
+
+        nav ul {
+          gap: 18px;
+        }
+
+        main {
+          padding: 50px 7% 30px;
+        }
+
+        .intro-section {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+
+        .intro-text {
+          text-align: center;
+        }
+
+        .photo-container {
+          order: -1;
+        }
+
+        .photo-container img {
+          width: 210px;
+          height: 210px;
+        }
+
+        h1 {
+          font-size: 2.2em;
+        }
+
+        .social-icons {
+          justify-content: center;
+        }
+
+        .home-links {
+          grid-template-columns: 1fr;
+          gap: 25px;
+        }
+      }
+    </style>
   </head>
 
   <body>
+    <!-- Header -->
     <header>
-      <img src="image.JPG" alt="Jhinuk Banerjee" />
+      <div class="nav-container">
+        <a href="index.html" class="site-name">Jhinuk Banerjee</a>
 
-```
-  <h1>Jhinuk Banerjee</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.pdf">CV</a></li>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="teaching.html">Teaching</a></li>
-      <li><a href="resume.pdf">CV</a></li>
-    </ul>
-  </nav>
-</header>
+            <li>
+              <button
+                class="theme-toggle"
+                id="themeToggle"
+                aria-label="Toggle dark mode"
+                title="Toggle dark mode"
+              >
+                <i class="fa-solid fa-moon"></i>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-<main>
-  <p class="bio">
-    I am a fourth-year Ph.D. student in Economics at the University of
-    Oklahoma. My research interests lie at the intersection of Political
-    Economy, Gender Economics, and Development Economics. My research
-    studies how economic conditions and institutions shape political
-    representation, political behavior, and public policy, with a
-    particular interest in gender and political decision-making.
-  </p>
+    <!-- Main Content -->
+    <main>
+      <section class="intro-section">
+        <!-- Left side -->
+        <div class="intro-text">
+          <h1>Jhinuk Banerjee</h1>
 
-  <div class="social-icons">
-    <!-- LinkedIn -->
-    <a
-      href="https://www.linkedin.com/in/jhinuk-banerjee-782198213/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <i class="fa-brands fa-linkedin"></i> LinkedIn
-    </a>
+          <p class="position">
+            Ph.D. Student in Economics<br />
+            University of Oklahoma
+          </p>
 
-    <!-- Google Scholar -->
-    <a
-      href="https://scholar.google.com/citations?user=E7LT3LISxdoC"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <i class="fa-brands fa-google-scholar"></i> Google Scholar
-    </a>
+          <p class="bio">
+            I am a fourth-year Ph.D. student in Economics at the University of
+            Oklahoma. My research interests lie at the intersection of
+            Political Economy, Gender Economics, and Development Economics. My
+            research studies how economic conditions and institutions shape
+            political representation, political behavior, and public policy,
+            with a particular interest in gender and political decision-making.
+          </p>
 
-    <!-- ORCID -->
-    <a
-      href="https://orcid.org/0009-0001-0312-5293"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <i class="fa-brands fa-orcid"></i> ORCID
-    </a>
+          <!-- Social Links -->
+          <div class="social-icons">
+            <!-- LinkedIn -->
+            <a
+              href="https://www.linkedin.com/in/jhinuk-banerjee-782198213/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
 
-    <!-- GitHub -->
-    <a
-      href="https://github.com/bjhinuk"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <i class="fa-brands fa-github"></i> GitHub
-    </a>
+            <!-- Google Scholar -->
+            <a
+              href="https://scholar.google.com/citations?user=E7LT3LISxdoC"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-google-scholar"></i> Google Scholar
+            </a>
 
-    <!-- Email -->
-    <a href="mailto:jhinuk.ban1@ou.edu">
-      <i class="fa-solid fa-envelope"></i> Email
-    </a>
-  </div>
-</main>
+            <!-- ORCID -->
+            <a
+              href="https://orcid.org/0009-0001-0312-5293"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-orcid"></i> ORCID
+            </a>
 
-<footer>
-  &copy; 2026 Jhinuk Banerjee. All rights reserved.
-</footer>
-```
+            <!-- GitHub -->
+            <a
+              href="https://github.com/bjhinuk"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
 
+            <!-- Email -->
+            <a href="mailto:jhinuk.ban1@ou.edu">
+              <i class="fa-solid fa-envelope"></i> Email
+            </a>
+          </div>
+
+          <!-- Contact line -->
+          <p class="contact-line">
+            Contact me at
+            <a href="mailto:jhinuk.ban1@ou.edu">jhinuk.ban1@ou.edu</a>
+          </p>
+        </div>
+
+        <!-- Right side -->
+        <div class="photo-container">
+          <img src="image.JPG" alt="Jhinuk Banerjee" />
+        </div>
+      </section>
+
+      <!-- Research and Teaching -->
+      <section class="home-links">
+        <a href="research.html" class="home-link">
+          <h2>Research →</h2>
+          <p>
+            My research examines political economy, gender, economic
+            conditions, and public policy.
+          </p>
+        </a>
+
+        <a href="teaching.html" class="home-link">
+          <h2>Teaching →</h2>
+          <p>
+            Information about my teaching experience and courses at the
+            University of Oklahoma.
+          </p>
+        </a>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      &copy; 2026 Jhinuk Banerjee. All rights reserved.
+    </footer>
+
+    <!-- Dark Mode Script -->
+    <script>
+      const themeToggle = document.getElementById("themeToggle");
+      const icon = themeToggle.querySelector("i");
+
+      // Load saved theme
+      const savedTheme = localStorage.getItem("theme");
+
+      if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+      }
+
+      themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+
+        if (document.body.classList.contains("dark-mode")) {
+          localStorage.setItem("theme", "dark");
+          icon.classList.remove("fa-moon");
+          icon.classList.add("fa-sun");
+        } else {
+          localStorage.setItem("theme", "light");
+          icon.classList.remove("fa-sun");
+          icon.classList.add("fa-moon");
+        }
+      });
+    </script>
   </body>
 </html>
