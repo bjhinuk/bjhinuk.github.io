@@ -3,24 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Teaching - Jhinuk Banerjee</title>
+
+    <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
-      rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
     <style>
       body {
         margin: 0;
         font-family: "Roboto", sans-serif;
         background: #f9f9f9;
         color: #333;
-        line-height: 1.6;
+        line-height: 1.7;
       }
+
+      /* Header */
       header {
         background: #fff;
         padding: 20px 0;
         text-align: center;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
+
+      header h1 {
+        margin: 0 0 10px;
+        font-size: 2em;
+        font-weight: 700;
+      }
+
+      /* Navigation */
       nav ul {
         list-style: none;
         padding: 0;
@@ -29,6 +44,7 @@
         justify-content: center;
         gap: 20px;
       }
+
       nav ul li a {
         text-decoration: none;
         color: #0077b5;
@@ -38,24 +54,66 @@
         display: block;
         transition: border-bottom 0.3s;
       }
+
       nav ul li a:hover {
         border-bottom: 2px solid #0077b5;
       }
+
+      /* Main Content */
       main {
-        padding: 40px 20px;
-        max-width: 600px;
+        padding: 50px 25px;
+        max-width: 850px;
         margin: 0 auto;
-        text-align: left;
       }
-      section {
+
+      main h2 {
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 35px;
+        font-weight: 700;
+      }
+
+      .section-title {
+        font-size: 1.4em;
+        margin-top: 35px;
         margin-bottom: 30px;
+        font-weight: 500;
+        color: #444;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 8px;
       }
-      section h4 {
-        margin-bottom: 10px;
+
+      /* Individual Courses */
+      .course {
+        margin-bottom: 40px;
       }
-      section p {
-        margin: 5px 0;
+
+      .course h3 {
+        margin: 0 0 8px;
+        font-size: 1.25em;
+        line-height: 1.4;
+        font-weight: 700;
+        color: #333;
       }
+
+      .course-number {
+        font-weight: 500;
+        color: #0077b5;
+      }
+
+      .semester {
+        margin: 0 0 12px;
+        font-size: 0.98em;
+        color: #555;
+      }
+
+      .course-description {
+        margin: 0;
+        font-size: 1em;
+        color: #444;
+      }
+
+      /* Footer */
       footer {
         margin-top: 40px;
         text-align: center;
@@ -63,12 +121,37 @@
         color: #aaa;
         padding-bottom: 20px;
       }
+
+      /* Mobile-friendly adjustments */
+      @media (max-width: 600px) {
+        main {
+          padding: 35px 20px;
+        }
+
+        nav ul {
+          gap: 10px;
+        }
+
+        nav ul li a {
+          font-size: 0.95em;
+          padding: 8px;
+        }
+
+        main h2 {
+          font-size: 1.7em;
+        }
+
+        .course h3 {
+          font-size: 1.15em;
+        }
+      }
     </style>
   </head>
 
   <body>
     <header>
       <h1>Jhinuk Banerjee</h1>
+
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -82,24 +165,82 @@
     <main>
       <h2>Teaching</h2>
 
-      <section>
-        <h4>Elements of Statistics (Teaching Assistantship)</h4>
-        <p>
-          <strong>Semester:</strong> Fall 2023, Spring 2024, Fall 2024, Spring
-          2025
+      <!-- Instructor of Record -->
+      <h3 class="section-title">Instructor of Record</h3>
+
+      <section class="course">
+        <h3>
+          <span class="course-number">ECON 1113-200</span> —
+          Principles of Macroeconomics
+        </h3>
+
+        <p class="semester">
+          <strong>Semester:</strong> Summer 2025
         </p>
-        <p>A short course description here.</p>
-        <p><a href="#">[Syllabus]</a></p>
+
+        <p class="course-description">
+          Introduction to the fundamental principles of macroeconomics,
+          including national income, unemployment, inflation, economic growth,
+          monetary and fiscal policy, and international macroeconomic issues.
+        </p>
       </section>
 
-      <section>
-        <h4>Principles of Macroeconomics</h4>
-        <p><strong>Semester:</strong> Summer 2025</p>
-        <p>Another course description here.</p>
-        <p><a href="#">[Syllabus]</a></p>
+      <section class="course">
+        <h3>
+          <span class="course-number">ECON 1123-301</span> —
+          Principles of Microeconomics
+        </h3>
+
+        <p class="semester">
+          <strong>Semester:</strong> Summer 2026
+        </p>
+
+        <p class="course-description">
+          Introduction to the fundamental principles of microeconomics,
+          including supply and demand, consumer and producer behavior, market
+          structures, market failures, and the role of government in the
+          economy.
+        </p>
+      </section>
+
+      <section class="course">
+        <h3>
+          <span class="course-number">ECON 1113-995</span> —
+          Principles of Macroeconomics
+        </h3>
+
+        <p class="semester">
+          <strong>Semester:</strong> Fall 2026
+        </p>
+
+        <p class="course-description">
+          Introduction to the fundamental principles of macroeconomics,
+          including national income, unemployment, inflation, economic growth,
+          monetary and fiscal policy, and international macroeconomic issues.
+        </p>
+      </section>
+
+      <!-- Teaching Assistant -->
+      <h3 class="section-title">Teaching Assistant</h3>
+
+      <section class="course">
+        <h3>Elements of Statistics</h3>
+
+        <p class="semester">
+          <strong>Semesters:</strong> Fall 2023, Spring 2024, Fall 2024,
+          Spring 2025
+        </p>
+
+        <p class="course-description">
+          Undergraduate course covering fundamental concepts and methods in
+          statistics, including descriptive statistics, probability,
+          statistical inference, and regression analysis.
+        </p>
       </section>
     </main>
 
-    <footer>&copy; 2025 Jhinuk Banerjee. All rights reserved.</footer>
+    <footer>
+      &copy; 2026 Jhinuk Banerjee. All rights reserved.
+    </footer>
   </body>
 </html>
