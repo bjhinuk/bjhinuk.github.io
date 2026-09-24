@@ -53,9 +53,7 @@
         transition: background-color 0.3s ease, color 0.3s ease;
       }
 
-      /* -------------------- */
       /* Header / Navigation */
-      /* -------------------- */
 
       header {
         background: var(--surface);
@@ -120,9 +118,7 @@
         transform: scale(1.08);
       }
 
-      /* -------------------- */
       /* Main Home Section */
-      /* -------------------- */
 
       main {
         max-width: 1100px;
@@ -142,16 +138,10 @@
       }
 
       h1 {
-        margin: 0 0 18px;
+        margin: 0 0 25px;
         font-weight: 700;
         font-size: 2.7em;
         letter-spacing: -0.5px;
-      }
-
-      .position {
-        margin: 0 0 25px;
-        font-size: 1.15em;
-        color: var(--secondary-text);
       }
 
       p.bio {
@@ -161,9 +151,7 @@
         line-height: 1.8;
       }
 
-      /* -------------------- */
       /* Photo */
-      /* -------------------- */
 
       .photo-container {
         text-align: center;
@@ -177,12 +165,27 @@
         box-shadow: 0 5px 20px var(--shadow);
       }
 
-      /* -------------------- */
+      /* Contact */
+
+      .contact-line {
+        margin-top: 30px;
+        margin-bottom: 18px;
+        color: var(--secondary-text);
+        font-size: 0.98em;
+      }
+
+      .contact-line a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      .contact-line a:hover {
+        text-decoration: underline;
+      }
+
       /* Social Icons */
-      /* -------------------- */
 
       .social-icons {
-        margin-top: 35px;
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
@@ -206,69 +209,30 @@
         font-size: 1.05em;
       }
 
-      /* -------------------- */
-      /* Contact */
-      /* -------------------- */
-
-      .contact-line {
-        margin-top: 18px;
-        color: var(--secondary-text);
-        font-size: 0.98em;
-      }
-
-      .contact-line a {
-        color: var(--accent);
-        text-decoration: none;
-      }
-
-      .contact-line a:hover {
-        text-decoration: underline;
-      }
-
-      /* -------------------- */
       /* Research / Teaching */
-      /* -------------------- */
 
       .home-links {
         margin-top: 75px;
         padding-top: 35px;
         border-top: 1px solid var(--border);
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 50px;
+        display: flex;
+        justify-content: center;
+        gap: 80px;
       }
 
       .home-link {
         text-decoration: none;
         color: var(--text);
-        padding: 10px 0;
-        transition: color 0.3s ease;
-      }
-
-      .home-link h2 {
-        margin: 0 0 8px;
-        font-size: 1.25em;
+        font-size: 1.15em;
         font-weight: 500;
-      }
-
-      .home-link p {
-        margin: 0;
-        color: var(--secondary-text);
-        font-size: 0.95em;
-        line-height: 1.6;
+        transition: color 0.3s ease;
       }
 
       .home-link:hover {
         color: var(--accent);
       }
 
-      .home-link:hover p {
-        color: var(--secondary-text);
-      }
-
-      /* -------------------- */
       /* Footer */
-      /* -------------------- */
 
       footer {
         max-width: 1100px;
@@ -279,9 +243,7 @@
         color: var(--secondary-text);
       }
 
-      /* -------------------- */
       /* Mobile */
-      /* -------------------- */
 
       @media (max-width: 750px) {
         header {
@@ -328,8 +290,7 @@
         }
 
         .home-links {
-          grid-template-columns: 1fr;
-          gap: 25px;
+          gap: 40px;
         }
       }
     </style>
@@ -364,14 +325,10 @@
     <!-- Main Content -->
     <main>
       <section class="intro-section">
+
         <!-- Left side -->
         <div class="intro-text">
           <h1>Jhinuk Banerjee</h1>
-
-          <p class="position">
-            Ph.D. Student in Economics<br />
-            University of Oklahoma
-          </p>
 
           <p class="bio">
             I am a fourth-year Ph.D. student in Economics at the University of
@@ -382,8 +339,15 @@
             with a particular interest in gender and political decision-making.
           </p>
 
+          <!-- Contact -->
+          <p class="contact-line">
+            Contact me at
+            <a href="mailto:jhinuk.ban1@ou.edu">jhinuk.ban1@ou.edu</a>
+          </p>
+
           <!-- Social Links -->
           <div class="social-icons">
+
             <!-- LinkedIn -->
             <a
               href="https://www.linkedin.com/in/jhinuk-banerjee-782198213/"
@@ -424,37 +388,25 @@
             <a href="mailto:jhinuk.ban1@ou.edu">
               <i class="fa-solid fa-envelope"></i> Email
             </a>
-          </div>
 
-          <!-- Contact line -->
-          <p class="contact-line">
-            Contact me at
-            <a href="mailto:jhinuk.ban1@ou.edu">jhinuk.ban1@ou.edu</a>
-          </p>
+          </div>
         </div>
 
         <!-- Right side -->
         <div class="photo-container">
           <img src="image.JPG" alt="Jhinuk Banerjee" />
         </div>
+
       </section>
 
       <!-- Research and Teaching -->
       <section class="home-links">
         <a href="research.html" class="home-link">
-          <h2>Research →</h2>
-          <p>
-            My research examines political economy, gender, economic
-            conditions, and public policy.
-          </p>
+          Research →
         </a>
 
         <a href="teaching.html" class="home-link">
-          <h2>Teaching →</h2>
-          <p>
-            Information about my teaching experience and courses at the
-            University of Oklahoma.
-          </p>
+          Teaching →
         </a>
       </section>
     </main>
