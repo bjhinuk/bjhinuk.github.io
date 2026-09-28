@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Research </title>
+    <title>Research - Jhinuk Banerjee</title>
 
     <!-- Google Fonts -->
     <link
@@ -55,16 +55,10 @@
       /* Header */
       header {
         background: var(--surface);
-        padding: 20px 0;
+        padding: 10px 0;
         text-align: center;
         box-shadow: 0 2px 4px var(--shadow);
         transition: background-color 0.3s ease;
-      }
-
-      header h1 {
-        margin: 0 0 10px;
-        font-size: 2em;
-        font-weight: 700;
       }
 
       /* Navigation */
@@ -194,8 +188,6 @@
 
   <body>
     <header>
-      <h1>Jhinuk Banerjee</h1>
-
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -296,7 +288,6 @@
       const themeToggle = document.getElementById("themeToggle");
       const icon = themeToggle.querySelector("i");
 
-      // Check the theme saved from another page
       const savedTheme = localStorage.getItem("theme");
 
       if (savedTheme === "dark") {
@@ -305,7 +296,6 @@
         icon.classList.add("fa-sun");
       }
 
-      // Toggle theme
       themeToggle.addEventListener("click", () => {
         document.body.classList.toggle("dark-mode");
 
