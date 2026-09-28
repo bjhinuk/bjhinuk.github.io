@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -13,21 +12,53 @@
       rel="stylesheet"
     />
 
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
     <style>
+      :root {
+        --background: #f9f9f9;
+        --surface: #ffffff;
+        --text: #333333;
+        --secondary-text: #666666;
+        --accent: #0077b5;
+        --border: #dddddd;
+        --shadow: rgba(0, 0, 0, 0.1);
+      }
+
+      body.dark-mode {
+        --background: #171717;
+        --surface: #222222;
+        --text: #eeeeee;
+        --secondary-text: #b8b8b8;
+        --accent: #5bb8e8;
+        --border: #383838;
+        --shadow: rgba(0, 0, 0, 0.3);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
       body {
         margin: 0;
         font-family: "Roboto", sans-serif;
-        background: #f9f9f9;
-        color: #333;
+        background: var(--background);
+        color: var(--text);
         line-height: 1.7;
+        transition: background-color 0.3s ease, color 0.3s ease;
       }
 
       /* Header */
       header {
-        background: #fff;
+        background: var(--surface);
         padding: 20px 0;
         text-align: center;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 4px var(--shadow);
+        transition: background-color 0.3s ease;
       }
 
       header h1 {
@@ -43,12 +74,13 @@
         margin: 0;
         display: flex;
         justify-content: center;
+        align-items: center;
         gap: 20px;
       }
 
       nav ul li a {
         text-decoration: none;
-        color: #0077b5;
+        color: var(--accent);
         font-weight: 500;
         font-size: 1em;
         padding: 10px;
@@ -57,7 +89,23 @@
       }
 
       nav ul li a:hover {
-        border-bottom: 2px solid #0077b5;
+        border-bottom: 2px solid var(--accent);
+      }
+
+      /* Theme Toggle */
+      .theme-toggle {
+        border: none;
+        background: none;
+        color: var(--text);
+        cursor: pointer;
+        font-size: 1.05em;
+        padding: 8px;
+        transition: color 0.3s ease, transform 0.2s ease;
+      }
+
+      .theme-toggle:hover {
+        color: var(--accent);
+        transform: scale(1.08);
       }
 
       /* Main Research Content */
@@ -79,8 +127,8 @@
         margin-top: 35px;
         margin-bottom: 30px;
         font-weight: 500;
-        color: #444;
-        border-bottom: 1px solid #ddd;
+        color: var(--secondary-text);
+        border-bottom: 1px solid var(--border);
         padding-bottom: 8px;
       }
 
@@ -94,19 +142,19 @@
         font-size: 1.25em;
         line-height: 1.4;
         font-weight: 700;
-        color: #333;
+        color: var(--text);
       }
 
       .authors {
         margin: 0 0 12px;
         font-size: 0.98em;
-        color: #555;
+        color: var(--secondary-text);
       }
 
       .paper p.description {
         margin: 0;
         font-size: 1em;
-        color: #444;
+        color: var(--secondary-text);
       }
 
       /* Footer */
@@ -114,7 +162,7 @@
         margin-top: 40px;
         text-align: center;
         font-size: 0.9em;
-        color: #aaa;
+        color: var(--secondary-text);
         padding-bottom: 20px;
       }
 
@@ -154,6 +202,18 @@
           <li><a href="research.html">Research</a></li>
           <li><a href="teaching.html">Teaching</a></li>
           <li><a href="resume.pdf">CV</a></li>
+
+          <!-- Day/Night Toggle -->
+          <li>
+            <button
+              class="theme-toggle"
+              id="themeToggle"
+              aria-label="Toggle dark mode"
+              title="Toggle dark mode"
+            >
+              <i class="fa-solid fa-moon"></i>
+            </button>
+          </li>
         </ul>
       </nav>
     </header>
@@ -230,5 +290,35 @@
     <footer>
       &copy; 2026 Jhinuk Banerjee. All rights reserved.
     </footer>
+
+    <!-- Theme Script -->
+    <script>
+      const themeToggle = document.getElementById("themeToggle");
+      const icon = themeToggle.querySelector("i");
+
+      // Check the theme saved from another page
+      const savedTheme = localStorage.getItem("theme");
+
+      if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+      }
+
+      // Toggle theme
+      themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+
+        if (document.body.classList.contains("dark-mode")) {
+          localStorage.setItem("theme", "dark");
+          icon.classList.remove("fa-moon");
+          icon.classList.add("fa-sun");
+        } else {
+          localStorage.setItem("theme", "light");
+          icon.classList.remove("fa-sun");
+          icon.classList.add("fa-moon");
+        }
+      });
+    </script>
   </body>
 </html>
